@@ -1,11 +1,11 @@
 import java.util.Random;
 
 // класс для генерации случайных чисел
-public class RandomNumber {
+public class RandomNumbers {
     private Random random; // объект для генерации случайных чисел
 
     // конструктор класса
-    public RandomNumber() {
+    public RandomNumbers() {
         this.random = new Random(); // инициализация
     }
 
