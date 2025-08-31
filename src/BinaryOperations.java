@@ -6,6 +6,11 @@ public class BinaryOperations {
         return Integer.toBinaryString(decimal); //используем встроенный метод Java
     }
 
+    //метод для преобразования двоичной строки в десятичное число
+    public int binaryToDecimal(String binary) {
+        return Integer.parseInt(binary, 2); //используем встроенный метод Java
+    }
+
     //метод для выполнения логической операции И (AND)
     public String andOperation(int num1, int num2) {
         String binary1 = decimalToBinary(num1); //преобразуем первое число в двоичное
