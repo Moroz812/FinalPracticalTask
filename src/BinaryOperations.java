@@ -61,4 +61,19 @@ public class BinaryOperations {
     }
 
     //метод для выполнения операции Штрих Шеффера (NAND)
+    public String nandOperation(int num1, int num2) {
+        //Штрих Шеффера - это отрицание операции И
+        String andResult = andOperation(num1, num2); //получаем результат И
+        StringBuilder result = new StringBuilder(); //создаем StringBuilder для результата
+
+        //инвертируем каждый бит в цикле (меняем 1 на 0 и 0 на 1)
+        for (int i = 0; i < andResult.length(); i++) {
+            if (andResult.charAt(i) == '1') {
+                result.append('0');
+            } else {
+                result.append('1');
+            }
+        }
+        return result.toString(); //возвращаем результат
+    }
 }

@@ -51,5 +51,12 @@ public class Main {
         System.out.println("Операции OR записаны в файл or_operations.txt");
 
         //операция Штрих Шеффера (NAND)
+        for (int i = 0; i < half; i++) {
+            String result = binaryOps.nandOperation(firstHalf[i], secondHalf[i]);
+            String output = "(" + firstHalf[i] + ") NAND (" + secondHalf[i] + ") = " + result;
+            fileWriter.writeLogicalOperationsToFile("NAND", output, "nand_operations.txt");
+        }
+        System.out.println("Операции NAND записаны в файл nand_operations.txt");
+        System.out.println("Программа завершена успешно!");
     }
 }
