@@ -36,24 +36,27 @@ public class Main {
 
         //операция И (AND)
         for (int i = 0; i < half; i++) {
-            String result = binaryOps.andOperation(firstHalf[i], secondHalf[i]);
-            String output = "(" + firstHalf[i] + ") AND (" + secondHalf[i] + ") = " + result;
+            String binaryResult = binaryOps.andOperation(firstHalf[i], secondHalf[i]);
+            int decimalResult = binaryOps.binaryToDecimal(binaryResult); //преобразование в десятичное
+            String output = "(" + firstHalf[i] + ") AND (" + secondHalf[i] + ") = " + binaryResult + " = " + decimalResult;
             fileWriter.writeLogicalOperationsToFile("AND", output, "and_operations.txt");
         }
         System.out.println("Операции AND записаны в файл and_operations.txt");
 
         //операция ИЛИ (OR)
         for (int i = 0; i < half; i++) {
-            String result = binaryOps.orOperation(firstHalf[i], secondHalf[i]);
-            String output = "(" + firstHalf[i] + ") OR (" + secondHalf[i] + ") = " + result;
+            String binaryResult = binaryOps.orOperation(firstHalf[i], secondHalf[i]);
+            int decimalResult = binaryOps.binaryToDecimal(binaryResult); //преобразование в десятичное
+            String output = "(" + firstHalf[i] + ") OR (" + secondHalf[i] + ") = " + binaryResult + " = " + decimalResult;
             fileWriter.writeLogicalOperationsToFile("OR", output, "or_operations.txt");
         }
         System.out.println("Операции OR записаны в файл or_operations.txt");
 
         //операция Штрих Шеффера (NAND)
         for (int i = 0; i < half; i++) {
-            String result = binaryOps.nandOperation(firstHalf[i], secondHalf[i]);
-            String output = "(" + firstHalf[i] + ") NAND (" + secondHalf[i] + ") = " + result;
+            String binaryResult = binaryOps.nandOperation(firstHalf[i], secondHalf[i]);
+            int decimalResult = binaryOps.binaryToDecimal(binaryResult); //преобразование в десятичное
+            String output = "(" + firstHalf[i] + ") NAND (" + secondHalf[i] + ") = " + binaryResult + " = " + decimalResult;
             fileWriter.writeLogicalOperationsToFile("NAND", output, "nand_operations.txt");
         }
         System.out.println("Операции NAND записаны в файл nand_operations.txt");
