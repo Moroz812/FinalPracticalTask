@@ -16,5 +16,11 @@ public class FileWriterUtil {
         }
         writer.close(); // закрываем файл
     }
+
+    // метод для записи результатов логических операций в файл
+    public void writeLogicalOperationsToFile(String operation, String result, String filename) throws IOException {
+        FileWriter writer = new FileWriter(filename, true); // cоздаём FileWriter с возможнотью дозаписи в файл
+        writer.write(result + "\n"); // запись результата операции
+        writer.close(); // закрытие файла
+    }
 }
-// метод для записи результатов логических операций в файл
