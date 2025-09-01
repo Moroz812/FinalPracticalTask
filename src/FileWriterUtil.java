@@ -38,13 +38,4 @@ public class FileWriterUtil {
         writer.write(content + "\n"); //запись результата операции
         writer.close(); //закрытие файла
     }
-
-/*
-    //метод для записи результатов логических операций в файл
-    public void writeLogicalOperationsToFile(String operation, String result, String baseFilename) throws IOException {
-        String filename = getFilename(baseFilename, "txt"); //получаем имя файла
-        FileWriter writer = new FileWriter(filename, true); //создаём FileWriter для записи в файл
-        writer.write(result + "\n"); //запись результата операции
-        writer.close(); //закрытие файла
-    } */
 }
